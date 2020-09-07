@@ -1,9 +1,9 @@
-const Ship = (length) => {
-	const ship = Array(length).fill(false)
-	const id = Math.round(Math.random() * 100)
+const Ship = (id, coords) => {
+	const ship = new Array(coords.length).fill(false)
 
 	function hit(num) {
-		ship[num] = true
+		let idx = coords.indexOf(num)
+		ship[idx] = true
 
 		return ship
 	}
