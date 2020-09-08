@@ -5,5 +5,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Battleship</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<h1 class="title">Battleship</h1>
+		</header>
+
+		<div class="container">
+			<div class="ships">
+				<div class="destroyer-ship" draggable="true"></div>
+				<div class="cruiser-ship" draggable="true"></div>
+				<div class="cruiser-ship" draggable="true"></div>
+				<div class="battleship-ship" draggable="true"></div>
+				<div class="carrier-ship" draggable="true"></div>
+			</div>
+			<div id="player" class="mini-container">
+				<p class="name">Player</p>
+				<div id="plr1" class="game-board"></div>
+			</div>
+			<div id="ai" class="mini-container">
+				<p class="name">Computer</p>
+				<div id="plr2" class="game-board"></div>
+			</div>
+		</div>
+	</body>
+
+	<script src="index.js"></script>
 </html>
