@@ -31,9 +31,13 @@ header {
 
 .ships {
 	margin-right: 0em;
+	cursor: move;
 }
 
 .destroyer-ship {
+	position: absolute;
+	top: 195px;
+	left: 30px;
 	width: 80px;
 	height: 40px;
 	background-color: #ef709d;
@@ -41,6 +45,19 @@ header {
 }
 
 .cruiser-ship {
+	position: absolute;
+	top: 275px;
+	left: 30px;
+	width: 120px;
+	height: 40px;
+	background-color: #ef709d;
+	margin-top: 1em;
+}
+
+.cruiser-ship-2 {
+	position: absolute;
+	top: 335px;
+	left: 30px;
 	width: 120px;
 	height: 40px;
 	background-color: #ef709d;
@@ -48,6 +65,9 @@ header {
 }
 
 .battleship-ship {
+	position: absolute;
+	top: 395px;
+	left: 30px;
 	width: 160px;
 	height: 40px;
 	background-color: #ef709d;
@@ -55,6 +75,9 @@ header {
 }
 
 .carrier-ship {
+	position: absolute;
+	top: 455px;
+	left: 30px;
 	width: 200px;
 	height: 40px;
 	background-color: #ef709d;
@@ -63,7 +86,7 @@ header {
 
 .mini-container {
 	margin-top: 2em;
-	margin-right: 10em;
+	margin-right: 5em;
 }
 
 .name {
@@ -84,8 +107,15 @@ header {
 }
 
 .board-cell {
+	position: relative;
+	top: 0px;
+	left: 0px;
 	width: 40px;
 	height: 40px;
 	background-color: white;
 	border: 1px solid #70e4ef;
+}
+
+.dragging {
+	opacity: 0.5;
 }
