@@ -35,9 +35,9 @@ header {
 }
 
 .destroyer-ship {
-	position: absolute;
+	/* position: absolute;
 	top: 195px;
-	left: 30px;
+	left: 30px; */
 	width: 80px;
 	height: 40px;
 	background-color: #ef709d;
@@ -45,9 +45,9 @@ header {
 }
 
 .cruiser-ship {
-	position: absolute;
+	/* position: absolute;
 	top: 275px;
-	left: 30px;
+	left: 30px; */
 	width: 120px;
 	height: 40px;
 	background-color: #ef709d;
@@ -55,9 +55,9 @@ header {
 }
 
 .cruiser-ship-2 {
-	position: absolute;
+	/* position: absolute;
 	top: 335px;
-	left: 30px;
+	left: 30px; */
 	width: 120px;
 	height: 40px;
 	background-color: #ef709d;
@@ -65,9 +65,9 @@ header {
 }
 
 .battleship-ship {
-	position: absolute;
+	/* position: absolute;
 	top: 395px;
-	left: 30px;
+	left: 30px; */
 	width: 160px;
 	height: 40px;
 	background-color: #ef709d;
@@ -75,13 +75,72 @@ header {
 }
 
 .carrier-ship {
-	position: absolute;
+	/* position: absolute;
 	top: 455px;
-	left: 30px;
+	left: 30px; */
 	width: 200px;
 	height: 40px;
 	background-color: #ef709d;
 	margin-top: 1em;
+}
+
+.destroyer {
+	background-color: #ef709d;
+}
+
+.cruiser {
+	background-color: #ef709d;
+}
+
+.battleship {
+	background-color: #ef709d;
+}
+
+.carrier {
+	background-color: #ef709d;
+}
+
+.taken {
+	position: relative;
+}
+
+.destroyer-ship-vertical {
+	/* display: flex;
+	flex-wrap: wrap; */
+	width: 40px;
+	height: 80px;
+}
+
+.cruiser-ship-vertical {
+	/* display: flex;
+	flex-wrap: wrap; */
+	width: 40px;
+	height: 120px;
+}
+
+.battleship-ship-vertical {
+	/* display: flex;
+	flex-wrap: wrap; */
+	width: 40px;
+	height: 160px;
+}
+
+.carrier-ship-vertical {
+	width: 40px;
+	height: 200px;
+}
+
+.rotate {
+	position: absolute;
+	left: 60px;
+	top: 555px;
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.rotate:hover {
+	color: #fff200;
 }
 
 .mini-container {
@@ -107,9 +166,6 @@ header {
 }
 
 .board-cell {
-	position: relative;
-	top: 0px;
-	left: 0px;
 	width: 40px;
 	height: 40px;
 	background-color: white;
