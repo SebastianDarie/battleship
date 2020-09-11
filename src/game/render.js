@@ -1,5 +1,6 @@
+import drag from './drag'
+
 const render = () => {
-	//const ships = document.querySelectorAll('#ships')
 	const plrBoard = document.querySelector('#plr1')
 	const aiBoard = document.querySelector('#plr2')
 	const destroyer = document.querySelector('.destroyer-ship')
@@ -11,8 +12,8 @@ const render = () => {
 
 	const plrSquares = []
 	const aiSquares = []
-	let isHorizontal = true
 	let direction
+	let isHorizontal = true
 
 	const shipArr = [
 		{
@@ -101,10 +102,15 @@ const render = () => {
 	}
 
 	function verticalClasses() {
+		destroyer.classList.toggle('ship-vertical')
 		destroyer.classList.toggle('destroyer-ship-vertical')
+		cruiser.classList.toggle('ship-vertical')
 		cruiser.classList.toggle('cruiser-ship-vertical')
+		cruiser2.classList.toggle('ship-vertical')
 		cruiser2.classList.toggle('cruiser-ship-vertical')
+		battleship.classList.toggle('ship-vertical')
 		battleship.classList.toggle('battleship-ship-vertical')
+		carrier.classList.toggle('ship-vertical')
 		carrier.classList.toggle('carrier-ship-vertical')
 
 		isHorizontal = !isHorizontal
@@ -120,6 +126,8 @@ const render = () => {
 	generateShip(shipArr[4])
 
 	rotateBtn.addEventListener('click', rotateShips)
+
+	drag(plrSquares)
 
 	return { createBoard }
 }

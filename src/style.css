@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root {
+	--clr-ship: #ef709d;
+	--width: 40px;
+	--height: 40px;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -34,70 +40,69 @@ header {
 	cursor: move;
 }
 
+.ship {
+	display: flex;
+}
+
+.ship-vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+.ship-width {
+	width: var(--width);
+	height: var(--height);
+}
+
 .destroyer-ship {
-	/* position: absolute;
-	top: 195px;
-	left: 30px; */
-	width: 80px;
-	height: 40px;
-	background-color: #ef709d;
+	width: calc(var(--width) * 2);
+	height: var(--height);
+	background-color: var(--clr-ship);
 	margin-top: 2em;
 }
 
 .cruiser-ship {
-	/* position: absolute;
-	top: 275px;
-	left: 30px; */
-	width: 120px;
-	height: 40px;
-	background-color: #ef709d;
+	width: calc(var(--width) * 3);
+	height: var(--height);
+	background-color: var(--clr-ship);
 	margin-top: 1em;
 }
 
 .cruiser-ship-2 {
-	/* position: absolute;
-	top: 335px;
-	left: 30px; */
-	width: 120px;
-	height: 40px;
-	background-color: #ef709d;
+	width: calc(var(--width) * 3);
+	height: var(--height);
+	background-color: var(--clr-ship);
 	margin-top: 1em;
 }
 
 .battleship-ship {
-	/* position: absolute;
-	top: 395px;
-	left: 30px; */
-	width: 160px;
-	height: 40px;
-	background-color: #ef709d;
+	width: calc(var(--width) * 4);
+	height: var(--height);
+	background-color: var(--clr-ship);
 	margin-top: 1em;
 }
 
 .carrier-ship {
-	/* position: absolute;
-	top: 455px;
-	left: 30px; */
-	width: 200px;
-	height: 40px;
-	background-color: #ef709d;
+	width: calc(var(--width) * 5);
+	height: var(--height);
+	background-color: var(--clr-ship);
 	margin-top: 1em;
 }
 
 .destroyer {
-	background-color: #ef709d;
+	background-color: var(--clr-ship);
 }
 
 .cruiser {
-	background-color: #ef709d;
+	background-color: var(--clr-ship);
 }
 
 .battleship {
-	background-color: #ef709d;
+	background-color: var(--clr-ship);
 }
 
 .carrier {
-	background-color: #ef709d;
+	background-color: var(--clr-ship);
 }
 
 .taken {
@@ -105,29 +110,27 @@ header {
 }
 
 .destroyer-ship-vertical {
-	/* display: flex;
-	flex-wrap: wrap; */
-	width: 40px;
-	height: 80px;
+	width: var(--width);
+	height: calc(var(--height) * 2);
+	background-color: var(--clr-ship);
 }
 
 .cruiser-ship-vertical {
-	/* display: flex;
-	flex-wrap: wrap; */
-	width: 40px;
-	height: 120px;
+	width: var(--width);
+	height: calc(var(--height) * 3);
+	background-color: var(--clr-ship);
 }
 
 .battleship-ship-vertical {
-	/* display: flex;
-	flex-wrap: wrap; */
-	width: 40px;
-	height: 160px;
+	width: var(--width);
+	height: calc(var(--height) * 4);
+	background-color: var(--clr-ship);
 }
 
 .carrier-ship-vertical {
-	width: 40px;
-	height: 200px;
+	width: var(--width);
+	height: calc(var(--height) * 5);
+	background-color: var(--clr-ship);
 }
 
 .rotate {
@@ -165,6 +168,11 @@ header {
 	margin-left: 5em;
 }
 
+#plr2 > .taken {
+	background-color: white;
+	border: 1px solid #70e4ef;
+}
+
 .board-cell {
 	width: 40px;
 	height: 40px;
@@ -174,4 +182,9 @@ header {
 
 .dragging {
 	opacity: 0.5;
+}
+
+.dropped {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
