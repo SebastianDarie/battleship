@@ -40,6 +40,12 @@ header {
 	cursor: move;
 }
 
+.ships-vertical {
+	display: flex;
+	flex-direction: row;
+	cursor: move;
+}
+
 .ship {
 	display: flex;
 }
@@ -47,6 +53,7 @@ header {
 .ship-vertical {
 	display: flex;
 	flex-direction: column;
+	margin: 10px;
 }
 
 .ship-width {
@@ -187,4 +194,68 @@ header {
 .dropped {
 	opacity: 0.5;
 	cursor: not-allowed;
+}
+
+.start-game {
+	position: absolute;
+	top: 655px;
+	right: 680px;
+}
+
+.start-btn {
+	--c: goldenrod;
+	color: var(--c);
+	font-size: 16px;
+	border: 0.3em solid var(--c);
+	border-radius: 0.5em;
+	width: 12em;
+	height: 3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 0.1em;
+	text-align: center;
+	line-height: 3em;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: 0.5s;
+	margin: 1em;
+}
+
+.gold {
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	background-color: var(--c);
+	transform: translateY(150%);
+	border-radius: 50%;
+	left: calc((var(--n) - 1) * 25%);
+	transition: 0.5s;
+	transition-delay: calc((var(--n) - 1) * 0.1s);
+	z-index: -1;
+}
+
+.start-btn:hover {
+	color: black;
+}
+
+.start-btn:hover .gold {
+	transform: translateY(0) scale(2);
+}
+
+.start-btn .gold:nth-child(1) {
+	--n: 1;
+}
+
+.start-btn .gold:nth-child(2) {
+	--n: 2;
+}
+
+.start-btn .gold:nth-child(3) {
+	--n: 3;
+}
+
+.start-btn .gold:nth-child(4) {
+	--n: 4;
 }

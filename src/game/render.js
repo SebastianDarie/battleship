@@ -3,6 +3,7 @@ import drag from './drag'
 const render = () => {
 	const plrBoard = document.querySelector('#plr1')
 	const aiBoard = document.querySelector('#plr2')
+	const shipsContainer = document.querySelector('.ships')
 	const destroyer = document.querySelector('.destroyer-ship')
 	const cruiser = document.querySelector('.cruiser-ship')
 	const cruiser2 = document.querySelector('.cruiser-ship-2')
@@ -31,7 +32,7 @@ const render = () => {
 			],
 		},
 		{
-			name: 'cruiser',
+			name: 'cruiser-2',
 			directions: [
 				[0, 1, 2],
 				[0, 10, 20],
@@ -102,6 +103,7 @@ const render = () => {
 	}
 
 	function verticalClasses() {
+		shipsContainer.classList.toggle('ships-vertical')
 		destroyer.classList.toggle('ship-vertical')
 		destroyer.classList.toggle('destroyer-ship-vertical')
 		cruiser.classList.toggle('ship-vertical')
