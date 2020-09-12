@@ -181,10 +181,22 @@ header {
 }
 
 .board-cell {
+	position: relative;
 	width: 40px;
 	height: 40px;
 	background-color: white;
 	border: 1px solid #70e4ef;
+}
+
+.missed {
+	background-color: #ddd;
+}
+
+.center {
+	position: absolute;
+	top: 12%;
+	left: 35%;
+	font-size: 20px;
 }
 
 .dragging {

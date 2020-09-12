@@ -27,8 +27,6 @@ const setup = () => {
 		setPlrShips(plr1Board)
 		playGame(plr1, plr2, plr1Board, plr2Board)
 	})
-
-	console.log('•', 'x')
 }
 
 const playGame = (plr1, plr2, plr1Board, plr2Board) => {
